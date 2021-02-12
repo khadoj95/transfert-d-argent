@@ -1,0 +1,55 @@
+
+@media  (max-width: 768px ) {
+ .hearderset{
+ padding-top:120px;
+ box-sizing:border-box;
+
+}
+.numbers .rect {
+		position:relative;
+		z-index:1;
+		background:#fff;
+		width:13rem;
+		height:6rem;
+  padding-top: 3vmin;
+ margin:1rem;
+ border-radius:.5em;
+ box-shadow:1px 2px 50px 0px  #D35400;
+ 
+}
+.numbers .rect h1{
+
+ 
+ text-align: center;
+	font-size:3rem;
+	color:#D35400;
+	
+		
+ 
+}
+
+.purchase .cards  .card{
+	
+font-size:3vmin;
+
+	width:20rem;
+	margin:3vmin;
+background-position:center
+}
+
+
+
+
+@media  (max-width: 425px ) {
+ 
+.purchase .cards  .card{
+	
+font-size:3vmin;
+
+	width:100%;
+	margin:3vmin;
+background-position:center
+}
+
+}
+

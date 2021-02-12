@@ -6,6 +6,11 @@ import Service.ClientService;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.config.web.server.SecurityWebFiltersOrder;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -67,5 +72,13 @@ private ClientService clientservice;
 
 		    	clientservice.deleteCustomer(id);
 		    }
+		    @GetMapping("/login")
+			public String showLoginPage() {
+				Authentication authentication=SecurityContextHolder.getContext().getAuthentication();
+				if(authentication==null || authentication instanceof AnonymousAuthenticationToken) {
+					return "/login";
+				}
+				return "redirect:/";
+			}
 		
 	}
